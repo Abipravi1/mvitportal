@@ -1,0 +1,54 @@
+.card {
+    cursor: pointer;
+    transition: .5s all;
+}
+
+.card:hover {
+    box-shadow: 0 10px 10px grey;
+}
+
+.navbar {
+    background-color: #BBC3D5;
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 50.0488px 41.2345px rgba(0, 0, 0, 0.0532233), 0px 30.1471px 24.8353px rgba(0, 0, 0, 0.0456112), 0px 19.3198px 15.522px rgba(0, 0, 0, 0.0399626), 0px 12.5216px 9.63909px rgba(0, 0, 0, 0.035), 0px 7.88218px 5.72858px rgba(0, 0, 0, 0.0300374), 0px 4.5288px 3.06551px rgba(0, 0, 0, 0.0243888), 0px 1.99324px 1.24005px rgba(0, 0, 0, 0.0167767);
+}
+
+.nav-link {
+    padding: 10px;
+    border-radius: 4px;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.nav-active {
+    background-color: #E2CEBC
+}
+
+.header-image {
+    background-image: url("https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80");
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#header-person {
+    animation: move-up-and-down 3s ease-in-out infinite;
+    box-shadow: 4px 5px 20px 0px;
+}
+
+@keyframes move-up-and-down {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
