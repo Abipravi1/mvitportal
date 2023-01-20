@@ -1,11 +1,11 @@
 const firebaseConfig = {
-	apiKey: 'AIzaSyAAZYl9LkM-JsLcASx3hlYAsriD_ydomqg',
-	authDomain: 'mvit-6e674.firebaseapp.com',
-	projectId: 'mvit-6e674',
-	storageBucket: 'mvit-6e674.appspot.com',
-	messagingSenderId: '571311030129',
-	appId: '1:571311030129:web:fdd72baf6af3b99a3d80d0',
-	measurementId: 'G-SV8Q67H21Z',
+	apiKey: 'AIzaSyDZe_PzNHHNieqLkZN5t1B2l0e4Yn8z9-A',
+	authDomain: 'mvit-b135a.firebaseapp.com',
+	projectId: 'mvit-b135a',
+	storageBucket: 'mvit-b135a.appspot.com',
+	messagingSenderId: '205089846697',
+	appId: '1:205089846697:web:69e7e0035a8545f12dc0b8',
+	measurementId: 'G-ZNZ5VSPWB5',
 };
 
 firebase.initializeApp(firebaseConfig);
