@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Add Notes</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+            integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+            integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+            crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="firebase.js"></script>
+        <script src="notes.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid d-flex flex-row gap-3 justify-content-center align-items-center text-center"
+                style="text-align:center">
+                <a class="navbar-brand" href="/index.html">MVIT STUDENT PORTAL</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse text-center d-flex align-items-center flex-row justify-content-center gap-4"
+                    id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  nav-active" href="/notes.html">Notes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Images</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link">Portal</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div
+            class="d-flex flex-wrap flex-column gap-1 w-100 align-items-center justify-content-center addnotes-div1 bg">
+            <div class="d-flex flex-column gap-3">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Title</span>
+                    <input type="text" class="form-control" placeholder="Title of the File" id="title">
+                </div>
+                <div class=" input-group mb-3">
+                    <span class="input-group-text">Description</span>
+                    <textarea class="form-control" placeholder="Description of the File" id="description"></textarea>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Email Id (for beta users only)</span>
+                    <input type="text" class="form-control" placeholder="Email" id="email">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Dept</span>
+                    <select class="form-control" id="dept">
+                        <option value="">Select</option>
+                        <option value="AIML">AIML</option>
+                        <option value="IT">IT</option>
+                        <option value="CSE">CSE</option>
+                        <option value="ECE">ECE</option>
+                        <option value="EEE">EEE</option>
+                        <option value="IOT & FT">IOT & FT</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Semester</span>
+                    <select class="form-control" id="sem">
+                        <option value="">Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">File as link</span>
+                    <input type="text" class="form-control"
+                        placeholder="you can add the link of the file as it is text mode file upload is not supported"
+                        id="file">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Name</span>
+                    <input type="text" class="form-control" placeholder="name" id="name">
+                </div>
+                <button onclick="addItem()" class="btn btn-primary">Add</button>
+            </div>
+        </div>
+
+    </body>
+
+</html>

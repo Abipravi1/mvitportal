@@ -43,3 +43,27 @@ function search() {
 }
 
 getItems();
+
+function addItem() {
+	let name = document.querySelector('#name').value;
+	let file = document.querySelector('#file').value;
+	let dept = document.querySelector('#dept').value;
+	let sem = document.querySelector('#sem').value;
+	let email = document.querySelector('#email').value;
+	let title = document.querySelector('#title').value;
+	let description = document.querySelector('#description').value;
+	let data = {
+		name,
+		file,
+		dept,
+		sem,
+		title,
+		email,
+		date: '',
+		description,
+	};
+	console.log(data);
+
+	db.collection('notes').add(data);
+	// window.location.reload();
+}
