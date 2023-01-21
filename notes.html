@@ -17,12 +17,13 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="firebase.js"></script>
     <script src="notes.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   </head>
 
-  <body>
+  <body class="notes">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid d-flex flex-row gap-3 justify-content-center align-items-center text-center"
         style="text-align:center">
@@ -54,12 +55,22 @@
         </div>
       </div>
     </nav>
-    <div class="d-flex flex-row gap-3 p-4" id="notesdata">
-
-    </div>
     <div>
+      <input type="search" class="form-control ss" onkeydown="search()" id="search" placeholder="Search" />
+    </div>
+    <div class="d-flex flex-row gap-3 p-4 flex-wrap align-items-center justify-content-center" data-aos="fade-up"
+      id="notesdata">
 
     </div>
+    <a href="https://forms.gle/qxgVGerKZ7UPKygz6" target="_blank" class="addiconbotton-notes">
+      <p>+</p>
+    </a>
+
   </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+  </script>
 
 </html>

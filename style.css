@@ -1,10 +1,40 @@
-.card {
+.card1 {
     cursor: pointer;
-    transition: .5s all;
+    transition: .2s all;
+    background-color: #cddc263a;
+    --bs-card-spacer-y: 1rem;
+    --bs-card-spacer-x: 1rem;
+    --bs-card-title-spacer-y: 0.5rem;
+    --bs-card-border-width: var(--bs-border-width);
+    --bs-card-border-color: var(--bs-border-color-translucent);
+    --bs-card-border-radius: var(--bs-border-radius);
+    --bs-card-box-shadow: ;
+    --bs-card-inner-border-radius: calc(var(--bs-border-radius) - (var(--bs-border-width)));
+    --bs-card-cap-padding-y: 0.5rem;
+    --bs-card-cap-padding-x: 1rem;
+    --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+    --bs-card-img-overlay-padding: 1rem;
+    --bs-card-group-margin: 0.75rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: var(--bs-card-height);
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+    border-radius: var(--bs-card-border-radius);
 }
 
-.card:hover {
-    box-shadow: 0 10px 10px grey;
+.card1:hover {
+   transform: translateY(-5px);
+   border-bottom: green 5px inset;
+}
+
+.notes {
+    background-image: url('https://framerusercontent.com/images/GFiKV1qSfNcXOGRALvHc0l4UX0U.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .navbar {
@@ -51,4 +81,32 @@
     100% {
         transform: translateY(0);
     }
+}
+
+.ss {
+    margin:10px;
+    max-width: 300px;
+}
+
+.addiconbotton-notes {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    text-decoration: none;
+}
+.addiconbotton-notes p {
+    padding:10px;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: large;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: white;
+}
+
+#notesdata {
+    max-height: 600px;
+    overflow-y: scroll;
 }
