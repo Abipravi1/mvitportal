@@ -32,15 +32,16 @@
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse text-center d-flex align-items-center flex-row justify-content-center gap-4"
-          id="navbarNav">
+        <div class="collapse navbar-collapse" id=" navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link active" href="/index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link  nav-active" href="/notes.html">Notes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/lectures/lectures.html">Lectures</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Images</a>
@@ -55,8 +56,30 @@
         </div>
       </div>
     </nav>
-    <div>
+    <div class="d-flex flex-row gap-2 flex-wrap">
       <input type="search" class="form-control ss" onkeydown="search()" id="search" placeholder="Search" />
+      <select class="form-control" id="notes-filter-dept" onchange="filterdept()">
+        <option value="">ALL</option>
+        <option value="AIML">AIML</option>
+        <option value="IT">IT</option>
+        <option value="CSE">CSE</option>
+        <option value="CIVIL">CIVIL</option>
+        <option value="MECH">MECH</option>
+        <option value="ECE">ECE</option>
+        <option value="EEE">EEE</option>
+        <option value="IOT & FT">IOT & FT</option>
+      </select>
+      <select class="form-control" id="notes-filter-sem" onchange="filtersem()">
+        <option value="">All Sem</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+      </select>
     </div>
     <div class="d-flex flex-row gap-3 p-4 flex-wrap align-items-center justify-content-center" data-aos="fade-up"
       id="notesdata">

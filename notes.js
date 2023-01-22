@@ -5,9 +5,11 @@ function generateItems(data1) {
 			? (dd += `<a href="${item.file}" target="_blank" style="text-decoration:none">
 		<div  class="card1" style="width: 18rem; height:150px">
         <div class="card-body">
-          <h5 class="card-title text-dark">${item.title}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">${item.user}</h6>
-          <p class="card-text text-dark">${item.description}</p>
+          <div class="d-flex gap-4">
+		 <h5 class="card-title">${item.title} </h5><span class="badge bg-primary text-white" style="height:100%">${item.dept}:${item.sem}</span> 
+		  </div>
+          <h6 class="card-subtitle mb-2">${item.user}</h6>
+          <p class="card-text">${item.description}</p>
         </div>
       </div>
 		</a>`)
@@ -44,7 +46,7 @@ function search() {
 
 getItems();
 
-function addItem() {
+async function addItem() {
 	let name = document.querySelector('#name').value;
 	let file = document.querySelector('#file').value;
 	let dept = document.querySelector('#dept').value;
@@ -53,7 +55,7 @@ function addItem() {
 	let title = document.querySelector('#title').value;
 	let description = document.querySelector('#description').value;
 	let data = {
-		name,
+		user: name,
 		file,
 		dept,
 		sem,
@@ -64,6 +66,33 @@ function addItem() {
 	};
 	console.log(data);
 
-	db.collection('notes').add(data);
+	await db.collection('notes').add(data);
+	alert('Notes added successfully');
 	// window.location.reload();
+}
+
+function filterdept(x) {
+	let v = document.querySelector('#notes-filter-dept').value;
+	let item = items.filter((data) =>
+		data.dept.toLowerCase().includes(v.toLowerCase()),
+	);
+	generateItems(item);
+	if (v.length >= 0 && v < 1) {
+		generateItems(items);
+	}
+}
+
+function filtersem() {
+	let v = document.querySelector('#notes-filter-dept').value;
+	let item = items.filter((data) =>
+		data.dept.toLowerCase().includes(v.toLowerCase()),
+	);
+	let m = document.querySelector('#notes-filter-sem').value;
+	let item1 = item.filter((data) =>
+		data.sem.toLowerCase().includes(m.toLowerCase()),
+	);
+	generateItems(item1);
+	if (v.length >= 0 && v < 1) {
+		generateItems(items1);
+	}
 }
