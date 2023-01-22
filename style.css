@@ -1,7 +1,7 @@
 .card1 {
     cursor: pointer;
     transition: .2s all;
-     background: rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.16);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
@@ -146,4 +146,11 @@ nav {
     justify-content: space-between;
     width:100%;
     flex-direction: row;
+}
+
+#lecss {
+    background-image: url("/assests/bg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
 }
