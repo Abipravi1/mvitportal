@@ -137,3 +137,13 @@ nav {
     width: 100px;
     margin: 10px;
 }
+
+.p-bottom {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    padding: 20px;
+    justify-content: space-between;
+    width:100%;
+    flex-direction: row;
+}
