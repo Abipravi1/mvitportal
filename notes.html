@@ -14,6 +14,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
       integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
       crossorigin="anonymous"></script>
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
@@ -22,13 +24,7 @@
     <script src="notes.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
   </head>
-  <script>
-    if (self == top) {
-      document.documentElement.style.display = 'none';
-    } else {
-      top.location = self.location;
-    }
-  </script>
+
 
   <body class="notes">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
