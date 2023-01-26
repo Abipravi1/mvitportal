@@ -109,7 +109,7 @@ async function addItem() {
 
   await db.collection("notes").add(data);
   alert("Notes added successfully");
-  // window.location.reload();
+  window.location.href = "/notes.html";
 }
 
 function filterdept(x) {

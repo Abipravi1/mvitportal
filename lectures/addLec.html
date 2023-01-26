@@ -20,7 +20,6 @@
         <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="../firebase.js"></script>
-        <script src="addLec.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     </head>
 
@@ -40,10 +39,10 @@
                             <a class="nav-link active" href="/index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  nav-active" href="/notes.html">Notes</a>
+                            <a class="nav-link  " href="/notes.html">Notes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/lectures/lectures.html">Lectures</a>
+                            <a class="nav-link nav-active" href="/lectures/lectures.html">Lectures</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Images</a>
@@ -63,7 +62,7 @@
             <div class="d-flex flex-column gap-3">
                 <div class="input-group mb-3">
                     <span class="input-group-text">Title</span>
-                    <input type="text" class="form-control" placeholder="Title of the File" id="title">
+                    <input type="text" class="form-control" placeholder="Title of the Video" id="title">
                 </div>
                 <div class="input-group mb-3">
                     <span class="input-group-text">Email Id (for beta users only)</span>
@@ -107,10 +106,11 @@
                     <span class="input-group-text">Name</span>
                     <input type="text" class="form-control" placeholder="name" id="name">
                 </div>
-                <button onclick="" class="btn btn-primary">Add</button>
+                <button onclick="add()" class="btn btn-primary">Add</button>
             </div>
         </div>
 
     </body>
+    <script src="addLec.js"></script>
 
 </html>
