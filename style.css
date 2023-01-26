@@ -96,12 +96,17 @@ nav {
     width: 50px;
     cursor: pointer;
     font-size: large;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(94, 5, 5);
     text-align: center;
     color: white;
 }
 
 #notesdata {
+    max-height: 500px;
+    overflow-y: scroll;
+}
+
+#lecss {
     max-height: 500px;
     overflow-y: scroll;
 }

@@ -1,3 +1,5 @@
+localStorage.getItem("user") ? null : (window.location.href = "/login.html");
+
 function generateItems(data1) {
   let dd = "";
   const cardColors = [

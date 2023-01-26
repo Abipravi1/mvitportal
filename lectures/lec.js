@@ -1,3 +1,5 @@
+localStorage.getItem("user") ? null : (window.location.href = "/login.html");
+
 function genItems(data) {
   let da = "";
   const cardColors = [
@@ -18,25 +20,27 @@ function genItems(data) {
   data.map((d, id1) => {
     const id = d.video ? d.video.slice(17) : 0;
     d.title
-      ? (da += ` <div class="card1 align-items-center" style="background-color:${
-          id1 % 4 == 0
-            ? cardColors[1].bg
-            : id1 % 2 == 0
-            ? cardColors[3].bg
-            : id1 % 3 == 0
-            ? cardColors[2].bg
-            : id1 % 3 == 1
-            ? "#0d6efd"
-            : "#ffc107"
-        }; color:${
-          id1 % 4 == 0
-            ? cardColors[1].color
-            : id1 % 2 == 0
-            ? cardColors[3].color
-            : id1 % 3 == 0
-            ? cardColors[2].color
-            : "black"
-        }; width: 300px; height:250px">
+      ? (da +=
+          d.active == "true"
+            ? ` <div class="card1 align-items-center" style="background-color:${
+                id1 % 4 == 0
+                  ? cardColors[1].bg
+                  : id1 % 2 == 0
+                  ? cardColors[3].bg
+                  : id1 % 3 == 0
+                  ? cardColors[2].bg
+                  : id1 % 3 == 1
+                  ? "#0d6efd"
+                  : "#ffc107"
+              }; color:${
+                id1 % 4 == 0
+                  ? cardColors[1].color
+                  : id1 % 2 == 0
+                  ? cardColors[3].color
+                  : id1 % 3 == 0
+                  ? cardColors[2].color
+                  : "black"
+              }; width: 300px; height:250px">
           ${d.embed ? d.embed : ""}
           ${
             d.video
@@ -47,7 +51,8 @@ function genItems(data) {
             <p class="card-text">${d.title}
             </p>
           </div>
-        </div>`)
+        </div>`
+            : "")
       : null;
   });
   document.getElementById("lecss").innerHTML = da;
@@ -67,3 +72,7 @@ function getItems() {
 }
 
 getItems();
+
+localStorage.getItem("user").length > 0
+  ? (document.getElementById("lec-add").style.display = "block")
+  : none;
