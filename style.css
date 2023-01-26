@@ -1,18 +1,14 @@
 .card1 {
     cursor: pointer;
     transition: .2s all;
-    background: rgba(255, 255, 255, 0.16);
-    border-radius: 16px;
+    border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    background-color: white;
     position: relative;
-    color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
+    background-color: yellowgreen;
     padding: 10px;
-    height: var(--bs-card-height);
     word-wrap: break-word;
     background-clip: border-box;
     border: 1px solid white;
@@ -23,19 +19,16 @@
 }
 
 .card1:hover {
-   transform: translateY(-5px);
-   border-bottom: rgb(255, 255, 255) 5px inset;
+   transform: translateY(-10px);
+   border-bottom: rgb(0, 0, 0) 10px inset;
 }
 
 .notes {
-    background-image: url('https://images.unsplash.com/photo-1472173148041-00294f0814a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
-    background-repeat: no-repeat;
-    background-size: cover;
+background-color: #f8f9fa;
 }
 
 .navbar {
     background-color: #BBC3D5;
-    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 50.0488px 41.2345px rgba(0, 0, 0, 0.0532233), 0px 30.1471px 24.8353px rgba(0, 0, 0, 0.0456112), 0px 19.3198px 15.522px rgba(0, 0, 0, 0.0399626), 0px 12.5216px 9.63909px rgba(0, 0, 0, 0.035), 0px 7.88218px 5.72858px rgba(0, 0, 0, 0.0300374), 0px 4.5288px 3.06551px rgba(0, 0, 0, 0.0243888), 0px 1.99324px 1.24005px rgba(0, 0, 0, 0.0167767);
 }
 
 .nav-link {
@@ -149,8 +142,25 @@ nav {
 }
 
 #lecss {
-    background-image: url("/assests/bg");
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
+}
+
+.card-team {
+    width: 18rem;
+    text-align: center;
+    border: none;
+    transition: .4s all;
+}
+
+
+.card-team:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+    box-shadow: 1px 2px 10px 1px grey;
+}
+
+iframe {
+    box-sizing: content-box;
 }
