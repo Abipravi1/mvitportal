@@ -2,7 +2,7 @@
 
     <head>
         <title>MVIT STUDENTS PORTAL</title>
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="style.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
@@ -14,19 +14,10 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
             integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
             crossorigin="anonymous"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
-        <script src="../firebase.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+        <script src="js.js" type="text/javascript" charset="utf-8"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
     </head>
-    <script>
-        if (self == top) {
-            document.documentElement.style.display = 'block';
-        } else {
-            top.location = self.location;
-        }
-    </script>
 
     <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -39,17 +30,18 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="../index.html">Home</a>
+                            <a class="nav-link " href="">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../notes.html">Notes</a>
+                            <a class="nav-link" href="/notes.html">Notes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link  active nav-active" href="#">Lectures</a>
+                            <a class="nav-link" href="/lectures/lectures.html">Lectures</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">AI Chat</a>
+                            <a class="nav-link active nav-active" href="/chat.html">AI Chat</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="#">Events</a>
                         </li>
@@ -60,14 +52,13 @@
                 </div>
             </div>
         </nav>
+        <div>
 
-        <div id="lecss" class="d-flex flex-row gap-3 flex-wrap p-3 align-items-center justify-content-center"></div>
-        <div id="lec-add" style="display:none">
-            <a href="addLec.html" class="addiconbotton-notes">
-                <p>+</p>
-            </a>
         </div>
     </body>
-    <script src="lec.js" type="text/javascript" charset="utf-8"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </html>

@@ -15,7 +15,7 @@ async function ll() {
         dept: "none",
         eno: user.providerData[0].uid,
       };
-      // await db.collection("users").add(uploadData);
+      await db.collection("users").add(uploadData);
       await localStorage.setItem("user", JSON.stringify(uploadData));
       window.location.href = "/index.html";
     })
